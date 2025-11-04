@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sangam Shrivastava | Creative Freelancer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background"></div>
+
+  <header>
+    <h1>Sangam<span class="dot">.</span></h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="home">
+    <img src="https://i.ibb.co/QPzmTnC/profile.png" alt="Sangam Shrivastava" class="profile" />
+    <h2>Hey, I'm <span class="name">Sangam Shrivastava</span> 👋</h2>
+    <h3 class="typing"></h3>
+    <p>
+      I’m a passionate <b>Video Editor</b>, <b>Web Developer</b>, and <b>Minecraft Plugin Developer</b> who loves creating digital experiences that inspire and perform.
+      Let’s build something awesome together!
+    </p>
+    <a href="#projects"><button class="btn">See My Work</button></a>
+  </section>
+
+  <section id="skills" class="skills">
+    <h3>What I Do</h3>
+    <div class="skill-grid">
+      <div class="skill">🎬 Professional Video Editing</div>
+      <div class="skill">🎮 Minecraft Plugin Development</div>
+      <div class="skill">💻 Full Stack Web Development</div>
+      <div class="skill">🌐 Website Hosting & Management</div>
+      <div class="skill">🧠 AI Tool Integration</div>
+      <div class="skill">⚙️ Automation & Tech Projects</div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <h3>Featured Projects</h3>
+    <div class="project-grid">
+      <div class="project">
+        <img src="https://i.ibb.co/X5r6gbY/videoedit.jpg" alt="Video Editing" />
+        <h4>🎥 Freelance Video Edits</h4>
+        <p>Edited professional lyric and promotional videos for creators using CapCut, VN, and Premiere Pro.</p>
+      </div>
+
+      <div class="project">
+        <img src="https://i.ibb.co/fNwSjqQ/mcplugin.jpg" alt="Minecraft Plugin" />
+        <h4>🧱 Minecraft Plugin Development</h4>
+        <p>Created custom plugins — from auction systems to RTP and warps — optimized for PaperMC.</p>
+      </div>
+
+      <div class="project">
+        <img src="https://i.ibb.co/z2nxnsY/webdev.jpg" alt="Web Development" />
+        <h4>💻 Web Development Sample</h4>
+        <p>A responsive futuristic web project built using HTML, CSS, and JS with advanced UI animations.</p>
+        <a href="https://1pad1222.github.io/" target="_blank"><button class="btn">Visit Sample</button></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h3>Let's Work Together</h3>
+    <p>📧 <a href="mailto:sangamshrivastava287@gmail.com">sangamshrivastava287@gmail.com</a></p>
+    <p>📷 Instagram: <a href="https://instagram.com/sangaamm__" target="_blank">@sangaamm__</a></p>
+    <p>💼 GitHub: <a href="https://1pad1222.github.io/" target="_blank">1pad1222.github.io</a></p>
+  </section>
+
+  <footer>© 2025 Sangam Shrivastava | Built with 💙 and Creativity</footer>
+
+  <script>
+    // Typing animation
+    const roles = ["Video Editor", "Web Developer", "Plugin Creator"];
+    let i = 0, j = 0;
+    const typing = document.querySelector(".typing");
+    function type() {
+      if (j < roles[i].length) {
+        typing.textContent += roles[i][j];
+        j++;
+        setTimeout(type, 120);
+      } else {
+        setTimeout(erase, 1500);
+      }
+    }
+    function erase() {
+      if (j > 0) {
+        typing.textContent = roles[i].substring(0, j - 1);
+        j--;
+        setTimeout(erase, 60);
+      } else {
+        i = (i + 1) % roles.length;
+        setTimeout(type, 400);
+      }
+    }
+    type();
+  </script>
+</body>
+</html>
